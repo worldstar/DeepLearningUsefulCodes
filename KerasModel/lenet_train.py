@@ -7,13 +7,10 @@ Original file is located at
     https://colab.research.google.com/drive/1jg2Gsrf4ykveOXGshlgsZdNN4jaxeKnR
 """
 
-!git clone https://github.com/worldstar/ultrasoundSoundAugmentation.git
 
-!wget https://github.com/OlafenwaMoses/IdenProf/releases/download/v1.0/idenprof-jpg.zip
-!unzip -qq idenprof-jpg.zip
 
-from ultrasoundSoundAugmentation.core.CustomDataGenerator import CustomDataGenerator
-from ultrasoundSoundAugmentation.core.Model.LeNet_Functional_Model import buildLeNetModel
+from core.CustomDataGenerator import CustomDataGenerator
+from core.Model.LeNet_Functional_Model import buildLeNetModel
 # from ultrasoundSoundAugmentation.core.Model.LeNet_Sequential_Model import buildLeNetModel
 
 # 影像大小
@@ -52,7 +49,7 @@ model = buildLeNetModel(inputs, num_classes)
 
 # callbacks_list = [checkpoint]
 
-model.fit_generator(
+model.fit(
       train_generator,
       steps_per_epoch=10,
       epochs=epochs,
