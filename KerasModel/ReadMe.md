@@ -1,14 +1,17 @@
-Step 1: Download dataset
-```
-wget https://github.com/OlafenwaMoses/IdenProf/releases/download/v1.0/idenprof-jpg.zip && unzip -qq idenprof-jpg.zip
-```
-Step 2: Run ResNet152
+We show the major steps to run the LeNet and other algorithms on Google Colab notebook service.
 
+Step 1: Download this project and move to this folder
 ```
-python resnet152.py
+!git clone https://github.com/worldstar/DeepLearningUsefulCodes.git
+%cd DeepLearningUsefulCodes/KerasModel/
 ```
 
-Step 3: Run LeNet_KerasFuntionalAPI.py
+Step 2: Download dataset and then unzip it quitely.
 ```
-python LeNet_KerasFuntionalAPI.py
+!wget https://github.com/OlafenwaMoses/IdenProf/releases/download/v1.0/idenprof-jpg.zip && unzip -qq idenprof-jpg.zip
+```
+
+Step 3: Run LeNet by Keras Funtional API
+```
+!python lenet_train.py
 ```
