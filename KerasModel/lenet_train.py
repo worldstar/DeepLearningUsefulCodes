@@ -14,7 +14,7 @@ from core.Model.LeNet_Functional_Model import buildLeNetModel
 # from ultrasoundSoundAugmentation.core.Model.LeNet_Sequential_Model import buildLeNetModel
 
 # 影像大小
-inputs=(256,256,3)
+img_height, img_width, img_channl = (256,256,3)
 
 # 若 GPU 記憶體不足，可調降 batch size 或凍結更多層網路
 batch_size=32
@@ -32,17 +32,17 @@ datagen=CustomDataGenerator(fun="Opening_operation",kernel=10,dtype=int)
 
 train_generator = datagen.flow_from_directory(
     './idenprof/train',
-    target_size=(256, 256),
-    batch_size=32,
+    target_size=(img_height, img_width),
+    batch_size=batch_size,
     class_mode='categorical')
 
 val_generator = datagen.flow_from_directory(
         './idenprof/test',
-        target_size=(256, 256),
-        batch_size=32,
+        target_size=(img_height, img_width),
+        batch_size=batch_size,
         class_mode='categorical')
 
-model = buildLeNetModel(inputs, num_classes)
+model = buildLeNetModel(img_height, img_width, img_channl, num_classes)
 
 # checkpoint = ModelCheckpoint(log_dir + "ep{epoch:03d}-loss{loss:.3f}-val_loss{val_loss:.3f}.h5",
 #     monitor='val_loss', save_weights_only=True, save_best_only=True, period=1)
