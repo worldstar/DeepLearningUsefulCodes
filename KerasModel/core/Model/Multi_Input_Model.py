@@ -48,7 +48,10 @@ def multi_input_model(img_height, img_width, img_channl,num_classes):
     x = Add()([x1, x2])
     x = Flatten()(x)
 
-    x=Dense(150,activation=mish,name='fc1')(x)
+    x=Activation(mish)(x)
+    x=Dense(150,name='fc1')(x)
+    x=Activation(mish)(x)
+    x=Dense(num_classes,name='fc2')(x)
     x=Dense(num_classes,activation='softmax')(x)
     output_ = Dense(num_classes, activation='sigmoid', name='output')(x)
  
