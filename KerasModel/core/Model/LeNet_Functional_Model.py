@@ -10,8 +10,8 @@ def mish(x):
     return Lambda(lambda x: x*K.tanh(K.softplus(x)))(x)
 
 
-def buildLeNetModel(inputs, num_classes):
-    X_input=Input(inputs)
+def buildLeNetModel(img_height, img_width, img_channl, num_classes):
+    X_input=Input(shape=(img_height, img_width, img_channl))
     # X=ZeroPadding2D((1,1))(X_input)
     X=Conv2D(32,(5,5),strides=(1,1),padding='valid',name='conv1')(X_input)
     X=Activation(mish)(X)
