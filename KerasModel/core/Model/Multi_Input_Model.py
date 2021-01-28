@@ -9,10 +9,10 @@ from tensorflow.keras.optimizers import SGD
 def mish(x):
     return Lambda(lambda x: x*K.tanh(K.softplus(x)))(x)
  
-def multi_input_model(inputs,num_classes):
+def multi_input_model(img_height, img_width, img_channl,num_classes):
 
-    input1_= Input(inputs, name='input1')
-    input2_ = Input(inputs, name='input2')
+    input1_= Input(shape(img_height, img_width, img_channl), name='input1')
+    input2_ = Input(shape(img_height, img_width, img_channl), name='input2')
 
     x1=Conv2D(32,(5,5),strides=(1,1),padding='valid',name='conv1')(input1_)
     x1=Activation(mish)(x1)
