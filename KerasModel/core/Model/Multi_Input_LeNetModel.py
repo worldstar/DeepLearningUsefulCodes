@@ -74,7 +74,7 @@ def multi_input_model(img_height, img_width, img_channl,num_classes):
     model = Model(inputs=[input1_, input2_], outputs=[output_])
     model.summary()
 
-    model.compile(optimizer=SGD(lr=0.0001, momentum=0.9), loss='categorical_crossentropy',metrics=['accuracy'])
+    model.compile(optimizer=Adam(lr=0.0001), loss='categorical_crossentropy',metrics=['accuracy'])
 
 
  
