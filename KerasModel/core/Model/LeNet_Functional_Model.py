@@ -17,7 +17,6 @@ def buildLeNetModel(img_height, img_width, img_channl, num_classes):
     X=Activation(mish)(X)
     X=MaxPooling2D((2,2),strides=(2,2))(X)
     X=Conv2D(32,(5,5),strides=(1,1),padding='valid',name='conv2')(X)
-    
     X=MaxPooling2D((2,2),strides=(2,2))(X)
     X=Activation(mish)(X)
     X=Flatten()(X)
