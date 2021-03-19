@@ -21,7 +21,6 @@
         <th>圖片</th>
         <th>參數</th>
       </tr>
-    </thead>
     <tbody id="upload">
 
     </tbody>
