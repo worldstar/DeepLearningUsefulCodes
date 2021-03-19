@@ -10,12 +10,12 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" crossorigin="anonymous">
     <script src="/vendor/bootstrap-4.5.0-dist/js/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
     <script src="/vendor/bootstrap-4.5.0-dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-<\head>
+
 <body>
   <!-- <h3><input id="upload-input" type="file" multiple="multiple"accept="image/gif, image/jpg, image/png"/></h3> -->
   <div class="custom-file">
-  <input type="file" class="custom-file-input" id="upload-input" multiple="multiple" accept="image/gif, image/jpg, image/png">
-  <label class="custom-file-label" for="customFile">Choose file</label>
+    <input type="file" class="custom-file-input" id="upload-input" multiple="multiple" accept="image/gif, image/jpg, image/png">
+    <label class="custom-file-label" for="customFile">Choose file</label>
   </div>
  <table class="table table-dark table-striped">
       <tr>
@@ -25,7 +25,7 @@
     <tbody id="upload">
 
     </tbody>
-  </table>
+ </table>
 
  </body>
 <script src="https://unpkg.com/@tensorflow/tfjs"></script>
