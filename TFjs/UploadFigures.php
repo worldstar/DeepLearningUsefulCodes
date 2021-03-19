@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" crossorigin="anonymous">
     <script src="/vendor/bootstrap-4.5.0-dist/js/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
     <script src="/vendor/bootstrap-4.5.0-dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+ <\>
 <body>
   <!-- <h3><input id="upload-input" type="file" multiple="multiple"accept="image/gif, image/jpg, image/png"/></h3> -->
   <div class="custom-file">
