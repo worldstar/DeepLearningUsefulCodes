@@ -14,7 +14,7 @@
 
 <script>
 async function run() {
-  document.write(`<img id='salad' name='salad' crossorigin='anonymous' src='VSDType2.png'>`);
+  document.write(`<img id='salad' name='salad' crossorigin='anonymous' src='./photo/1546fea49902ee2dbc640573d57a6d1d-_1_1-00021.png''>`);
   const model = await tf.automl.loadObjectDetection('model.json');
   const img = document.getElementById('salad');
   const options = {score: 0.5, iou: 0.5, topk: 20};
